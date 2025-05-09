@@ -25,7 +25,7 @@
 &kp TAB         &kp SQT   &kp COMMA &kp DOT &kp P &kp Y     &kp F &kp G  &kp C     &kp R   &kp L    &kp EQUAL
 &mt LCTRL ESC   &kp A     &kp O     &kp E   &kp U &kp I     &kp D &kp H  &kp T     &kp N   &kp S    &kp SLASH
 &kp GRAVE       &kp SEMI  &kp Q     &kp J   &kp K &kp X     &kp B &kp M  &kp W     &kp V   &kp Z    &kp BSLH
-            &kp LGUI &mt LSHFT BSPC &copy_paste_ht             &kp RET &lt 1 SPACE &kp MINUS
+            &kp LGUI &mt LSHFT BSPC &copy_paste_ht             &kp ENTER &lt 1 SPACE &kp MINUS
             >;
         };
 
