@@ -1,0 +1,34 @@
+/ {
+    behaviors {
+        // --- Macros ---
+        macro_copy: macro_copy {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp LC(&C)>;
+        };
+
+        macro_paste: macro_paste {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp LC(&V)>;
+        };
+
+        macro_cut: macro_cut {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_CUT";
+            #binding-cells = <0>;
+            bindings = <&kp LC(&X)>;
+        };
+
+        // --- Tap Dance: Single tap = HT, Double tap = Cut ---
+        cut_copy_paste: cut_copy_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CUT_COPY_PASTE";
+            #binding-cells = <0>;
+            bindings = <&copy_paste_ht>, <&macro_cut>;
+            tapping-term-ms = <200>;
+        };
+    };
+};
