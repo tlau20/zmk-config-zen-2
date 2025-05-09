@@ -1,29 +1,11 @@
 / {
     behaviors {
-        // Macro: Ctrl+C (Copy)
-        macro_copy: macro_copy {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_COPY";
+        //Copy/paste/cut tapdance
+        td_ccp: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
-        };
-
-        // Macro: Ctrl+V (Paste)
-        macro_paste: macro_paste {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_PASTE";
-            #binding-cells = <0>;
-            bindings = <&kp LC(V)>;
-        };
-
-        // Hold-Tap behavior: Tap = Copy, Hold = Paste
-        copy_paste_ht: copy_paste_ht {
-            compatible = "zmk,behavior-hold-tap";
-            label = "COPY_PASTE_HT";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&macro_paste &macro_copy>;
-        };
+            bindings = <&mt LC(V) LC(C)>, <&kp LC(X)>;
+        }
     };
 };
