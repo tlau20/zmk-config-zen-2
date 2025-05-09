@@ -20,7 +20,7 @@
         copy_paste_ht: copy_paste_ht {
             compatible = "zmk,behavior-hold-tap";
             label = "COPY_PASTE_HT";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&macro_paste>, <&macro_copy>;
