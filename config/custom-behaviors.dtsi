@@ -22,6 +22,16 @@
             bindings = <&kp LC(X)>;
         };
 
+        // --- Hold-Tap: Hold = Paste, Tap = Copy ---
+        copy_paste_ht: copy_paste_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COPY_PASTE_HT";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&macro_paste &macro_copy>;
+        };
+
         // --- Tap Dance: Single tap = HT, Double tap = Cut ---
         cut_copy_paste: cut_copy_paste {
             compatible = "zmk,behavior-tap-dance";
